@@ -1,0 +1,19 @@
+{
+  "name": "funda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "playwright": "^1.46.0",
+    "playwright-core": "^1.46.0",
+    "undici-types": "^6.18.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.46.1",
+    "@types/node": "^22.4.0"
+  },
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
