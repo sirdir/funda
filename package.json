@@ -10,9 +10,12 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.46.1",
-    "@types/node": "^22.4.0"
+    "@types/node": "^22.4.0",
+    "prettier": "3.3.3"
   },
-  "scripts": {},
+  "scripts": {
+    "prettier-fix": "prettier . --write"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
