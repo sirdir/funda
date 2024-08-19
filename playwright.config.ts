@@ -28,6 +28,10 @@ export default defineConfig({
         ...devices['Desktop Chrome'],
         storageState: 'playwright/.auth/user.json',
         userAgent: process.env.USER_AGENT,
+        viewport: {
+          width: 1920,
+          height: 1080,
+        },
       },
       dependencies: ['cookies'],
     },
@@ -37,6 +41,10 @@ export default defineConfig({
         ...devices['Desktop Firefox'],
         storageState: 'playwright/.auth/user.json',
         userAgent: process.env.USER_AGENT,
+        viewport: {
+          width: 1920,
+          height: 1080,
+        },
       },
       dependencies: ['cookies'],
     },
