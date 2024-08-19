@@ -12,6 +12,7 @@ export default defineConfig({
       width: 1920,
       height: 1080,
     },
+    testIdAttribute: 'data-test-id',
     baseURL: 'https://www.funda.nl',
     trace: 'on-first-retry',
     userAgent: process.env.USER_AGENT,

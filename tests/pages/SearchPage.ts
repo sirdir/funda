@@ -1,4 +1,4 @@
-import { expect, type Locator, type Page } from '@playwright/test';
+import { type Locator, type Page } from '@playwright/test';
 
 export class SearchPage {
   readonly page: Page;
@@ -8,6 +8,6 @@ export class SearchPage {
   constructor(page: Page) {
     this.page = page;
     this.header = page.locator('h1', { hasText: 'koopwoningen in Amsterdam' });
-    this.searchedItems = page.locator('[data-test-id="search-result-item"]');
+    this.searchedItems = page.getByTestId('search-result-item');
   }
 }

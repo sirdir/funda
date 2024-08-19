@@ -8,8 +8,10 @@ export class StartPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.searchBox = page.getByTestId('search-box');
-    this.suggestionList = page.getByTestId('SearchBox-location-suggestion');
+    this.searchBox = page.locator('[data-testid=search-box]');
+    this.suggestionList = page.locator(
+      '[data-testid=SearchBox-location-suggestion]',
+    );
   }
 
   async goto() {
