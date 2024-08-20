@@ -1,8 +1,5 @@
 {
   "name": "funda",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "dependencies": {
     "dotenv": "^16.4.5",
     "playwright": "^1.46.0",
@@ -17,7 +14,5 @@
   "scripts": {
     "prettier-fix": "prettier . --write"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC"
 }

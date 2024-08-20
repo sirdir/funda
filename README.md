@@ -1,5 +1,9 @@
 # funda
 
+First, replace in `.env` file value of USER_AGENT with propper one.
+
+Then, run the tests with `npx playwright test`
+
 # P.S.
 
 guys you have inconsistent usage of test locators `data-test-id` and `data-testid`.
