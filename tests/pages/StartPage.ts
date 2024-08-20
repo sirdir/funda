@@ -13,11 +13,12 @@ export class StartPage {
   }
 
   async goto() {
-    await this.page.goto('/');
+    await this.page.goto('/', { waitUntil: 'domcontentloaded' });
   }
 
   async search(query: string, index = 0): Promise<SearchPage> {
-    await this.searchBox.fill(query);
+    await this.searchBox.click();
+    await this.searchBox.pressSequentially(query, { delay: 50 });
     await this.suggestionList.nth(index).click();
     await expect(this.page).toHaveURL(/https\:\/\/www\.funda\.nl\/zoeken/);
 

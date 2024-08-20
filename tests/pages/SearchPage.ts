@@ -1,10 +1,6 @@
 import { expect, type Locator, type Page } from '@playwright/test';
 
 export class SearchPage {
-  async openMap() {
-    await this.mapButton.click();
-    await this.page.waitForLoadState('domcontentloaded');
-  }
   readonly page: Page;
   readonly header: Locator;
   readonly searchResultAmmount: Locator;
@@ -24,7 +20,11 @@ export class SearchPage {
   }
 
   async goto(path: string) {
-    await this.page.goto(path);
+    await this.page.goto(path, { waitUntil: 'domcontentloaded' });
+  }
+
+  async openMap() {
+    await this.mapButton.click();
     await this.page.waitForLoadState('domcontentloaded');
   }
 

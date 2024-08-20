@@ -15,8 +15,7 @@ export class HousePage {
   }
 
   async goto(url: string) {
-    await this.page.goto(url);
-    await this.page.waitForLoadState('domcontentloaded');
+    await this.page.goto(url, { waitUntil: 'networkidle' });
   }
 
   async unhidePhone() {
