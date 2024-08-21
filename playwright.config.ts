@@ -7,6 +7,7 @@ dotenv.config({ path: path.resolve(__dirname, '.env') });
 export default defineConfig({
   testDir: './tests',
   reporter: 'html',
+  retries: 3,
   use: {
     viewport: {
       width: 1920,
