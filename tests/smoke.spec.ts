@@ -28,7 +28,7 @@ test.describe('funda smoke test suite', () => {
     const zipAndCity = await searchPage.getZipCodeAndCity(0);
     await searchPage.openHouse(0);
 
-    await expect(searchPage.page).toHaveTitle(new RegExp(`Appartement te koop: ${streat} ${zipAndCity}`));
+    await expect(searchPage.page).toHaveTitle(new RegExp(`((Appartement)|(Huis)) te koop: ${streat} ${zipAndCity}`));
   });
 
   test('user can see phone of makelaar', async ({ housePage }) => {
